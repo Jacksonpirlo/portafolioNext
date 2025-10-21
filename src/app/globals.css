@@ -20,11 +20,17 @@
 }
 
 body {
-  background: var(--background);
+  background-image: url("../assets/gta_san_andreas.png");
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   height: 100vh;
   color: #ffffff;
+}
+
+@media screen and (max-width: 1000px) {
+  body {
+    background-color: #0000;
+  }
 }
