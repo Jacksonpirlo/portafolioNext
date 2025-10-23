@@ -21,6 +21,8 @@
 
 body {
   background-image: url("../assets/gta_san_andreas.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -29,8 +31,18 @@ body {
   color: #ffffff;
 }
 
+.font-sarpanch {
+  font-family: 'Sarpanch', sans-serif;
+}
+
+.pirataOne {
+    font-family: "Pirata One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
 @media screen and (max-width: 1000px) {
   body {
-    background-color: #0000;
+    background-color: #000000;
   }
 }

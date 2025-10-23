@@ -1,7 +1,18 @@
-import Image from "next/image";
+import Navbar from "@/components/organism/Nav";
+import HomePage from "@/components/template/Home";
 
 export default function Home() {
   return (
-    <h1>Hola</h1>
+    <div className="w-full">
+
+      <div className="block lg:hidden">
+        <HomePage />
+      </div>
+
+      <div className="hidden lg:block">
+        <Navbar />
+      </div>
+      
+    </div>
   );
 }
