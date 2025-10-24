@@ -1,3 +1,4 @@
+import Navbar from "@/components/organism/Nav";
 import "./globals.css";
 import Footer from "@/components/organism/Footer";
 
@@ -20,7 +21,7 @@ export default function RootLayout({
       <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet" />
 </head>
       <body className="bg-[#0f0f0f]">
-        
+      <div className="lg:hidden"><Navbar/></div>
         {children}
         <Footer />
       </body>
