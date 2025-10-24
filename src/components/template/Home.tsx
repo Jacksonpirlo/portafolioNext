@@ -4,6 +4,7 @@ import MyImage from "@/assets/My-img8bit-com-Effect.gif"
 import Navbar from "../organism/Nav";
 import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation";
+import { Button } from "../atoms/Button";
 
 const HomePage = () => {
     const router = useRouter();
@@ -11,7 +12,6 @@ const HomePage = () => {
     console.log(pathname)
     return(
         <>
-        <div className="lg:hidden"><Navbar /></div>
         <section className="p-6 mt-12  text-white">
         <h1 className="font-bold text-4xl pirataOne">Portafolio</h1>
             <article className="flex flex-col justify-center items-center m-3 mb-8">
@@ -27,7 +27,9 @@ const HomePage = () => {
                 </p>
             </article>
         </section>
-            {pathname == "/home" || "/projects" || "/skills" || "languages" || "contact" ? <button onClick={() => {router.back()}} className="cursor-pointer font-sarpanch text-[24px] mb-4">Back</button> : ""}
+            {pathname == "/dashboard/home" || pathname == "/dashboard/projects" || pathname == "/dashboard/skills" || pathname == "/dashboard/languages" || pathname == "/dashboard/contact" ? (
+                            <Button onClick={() => {router.back()}} className="cursor-pointer font-sarpanch text-[24px] mb-4" text="Back" />
+                        ) : ""}
 
         </>
     )

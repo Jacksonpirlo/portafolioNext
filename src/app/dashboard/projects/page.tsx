@@ -1,8 +1,7 @@
-import Navbar from "@/components/organism/Nav";
-import HomePage from "@/components/template/Home";
+import Projects from "@/components/template/Projects";
 
-export default function Home() {
-  return (
-    
-  );
+const ProjectPage = () => {
+  return (<Projects />);
 }
+
+export default ProjectPage;

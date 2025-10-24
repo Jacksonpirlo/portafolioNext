@@ -1,7 +1,7 @@
-import HomePage from "@/components/template/Home"
+import Languages from "@/components/template/Languages"
 
 const Home = () => {
-    return(<HomePage/>)
+    return(<Languages/>)
 }
 
 export default Home
