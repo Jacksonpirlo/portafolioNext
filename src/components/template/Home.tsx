@@ -28,7 +28,7 @@ const HomePage = () => {
             </article>
         </section>
             {pathname == "/dashboard/home" || pathname == "/dashboard/projects" || pathname == "/dashboard/skills" || pathname == "/dashboard/languages" || pathname == "/dashboard/contact" ? (
-                            <Button onClick={() => {router.back()}} className="cursor-pointer font-sarpanch text-[24px] mb-4" text="Back" />
+                            <Button onClick={() => {router.push("/")}} className="cursor-pointer font-sarpanch text-[24px] mb-4" text="Back" />
                         ) : ""}
 
         </>

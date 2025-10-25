@@ -20,7 +20,7 @@ export default function RootLayout({
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
       <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet" />
 </head>
-      <body className="bg-[#0f0f0f]">
+      <body className="bg-[#000000]">
       <div className="lg:hidden"><Navbar/></div>
         {children}
         <Footer />

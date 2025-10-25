@@ -1,8 +1,7 @@
 "use client"
 import { languages } from "@/helpers/utils";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import { Card } from "../molecules/Card";
-import { JSX } from "react";
 
 import { usePathname, useRouter } from "next/navigation";
 import { Button } from "../atoms/Button";
@@ -13,14 +12,14 @@ const Languages = () => {
     return(
         <>
         <section>
-            <article className="flex flex-col justify-center items-center lg:mt-30 m-7 gap-6">
-                <Card image={<Image src={languages.english} alt="English" width={400} />} title="English" description="Level: B1" className="text-center" />
-                <Card image={<Image src={languages.chinese} alt="Chinese" width={400} />} title="Mandarin Chinese" description="Level: HSK2" className="text-center" />
+            <article className="flex flex-col justify-center items-center lg:mt-30 m-7 lg:flex-row lg:gap-12">
+                <Card image={<Image src={languages.english} alt="English" width={500} className="w-60 sm:w-70 md:w-72 lg:w-80 xl:w-96 mx-auto" />} title="English" description="Level: B1" className="text-center" />
+                <Card image={<Image src={languages.chinese} alt="Chinese" width={500} className="w-60 sm:w-70 md:w-72 lg:w-80 xl:w-96 mx-auto" />} title="Mandarin Chinese" description="Level: HSK2" className="text-center" />
             </article>
         </section>
 
         {pathname == "/dashboard/home" || pathname == "/dashboard/projects" || pathname == "/dashboard/skills" || pathname == "/dashboard/languages" || pathname == "/dashboard/contact" ? (
-        <Button onClick={() => {router.back()}} className="cursor-pointer font-sarpanch text-[24px] mb-7" text="Back" />
+        <Button onClick={() => {router.push("/")}} className="cursor-pointer font-sarpanch text-[24px] mb-7" text="Back" />
         ) : ""}
         </>
     )
