@@ -12,7 +12,7 @@ const HomePage = () => {
     console.log(pathname)
     return(
         <>
-        <section className="p-6 mt-12  text-white">
+        <section className="p-6 text-white">
         <h1 className="font-bold text-4xl pirataOne">Portafolio</h1>
             <article className="flex flex-col justify-center items-center m-3 mb-8">
                 <Image src={MyImage} alt="Photo" width={200} height={266} />

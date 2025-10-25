@@ -10,7 +10,7 @@ const Skills = () => {
     console.log(pathname)
     return(
         <>
-        <section className="flex flex-col justify-center items-center lg:mt-60">
+        <section className="flex flex-col justify-center items-center lg:mt-30">
             <div className="m-6">
                 <h1 className="text-4xl font-bold pirataOne">Skills</h1>
             </div>

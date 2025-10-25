@@ -10,7 +10,7 @@ const Projects = () => {
     console.log(pathname)
     return(
         <>
-        <section className="flex flex-col justify-center items-center lg:mt-60 m-7">
+        <section className="flex flex-col justify-center items-center lg:mt-30 m-7">
             <h1 className="mb-16 font-bold text-5xl pirataOne">Projects</h1>
             <article className="flex flex-wrap gap-4 justify-center items-center">
             <Card image={projects.project1} href="https://jacksonpirlo.github.io/GreenGables/" title="Green Gables" description="Website for my school" className="flex flex-col rounded-2xl bg-white flex-wrap text-black text-center justify-center border-[1] border-white hover:mb-12 transition-all ease-in-out" />

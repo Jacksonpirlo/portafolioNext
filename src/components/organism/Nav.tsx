@@ -79,7 +79,7 @@ const Navbar = () => {
       {showNavbar && (
         <nav className="hidden lg:block shadow-md relative">
           <h1 className="text-[40px] mt-7 ml-7 pirataOne">Portfolio</h1>
-          <div className="flex flex-col text-[25px] justify-center items-center mt-40 gap-6">
+          <div className="flex flex-col text-[25px] justify-center items-center mt-10 gap-6">
             {menuItems.map((item) => (
               <div key={item} className="flex items-center gap-2 group">
                 <Image
