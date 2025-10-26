@@ -4,13 +4,15 @@ import { usePathname } from "next/navigation";
 import { skills } from "@/helpers/utils";
 import Image from "next/image";
 import { Button } from "../atoms/Button";
+import Section from "../atoms/Section";
 const Skills = () => {
     const router = useRouter();
     const pathname = usePathname()
     console.log(pathname)
     return(
         <>
-        <section className="flex flex-col justify-center items-center lg:mt-30">
+        <Section className="flex flex-col justify-center items-center lg:mt-30">
+            <>
             <div className="m-6">
                 <h1 className="text-4xl font-bold pirataOne">Skills</h1>
             </div>
@@ -25,7 +27,8 @@ const Skills = () => {
                     <li><Image src={skills.python} alt="HTML" width={100} height={100} /></li>
                 </ul>
             </article>
-        </section>
+            </>
+        </Section>
             {pathname == "/dashboard/home" || pathname == "/dashboard/projects" || pathname == "/dashboard/skills" || pathname == "/dashboard/languages" || pathname == "/dashboard/contact" ? (
                 <Button onClick={() => {router.push("/")}} className="cursor-pointer font-sarpanch text-[24px] mb-4" text="Back" />
             ) : ""}

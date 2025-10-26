@@ -1,10 +1,10 @@
 "use client"
 import Image from "next/image"
 import MyImage from "@/assets/My-img8bit-com-Effect.gif"
-import Navbar from "../organism/Nav";
 import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation";
 import { Button } from "../atoms/Button";
+import Section from "../atoms/Section";
 
 const HomePage = () => {
     const router = useRouter();
@@ -12,7 +12,8 @@ const HomePage = () => {
     console.log(pathname)
     return(
         <>
-        <section className="p-6 text-white">
+        <Section className="p-6 text-white">
+        <>
         <h1 className="font-bold text-4xl pirataOne">Portafolio</h1>
             <article className="flex flex-col justify-center items-center m-3 mb-8">
                 <Image src={MyImage} alt="Photo" width={200} height={266} />
@@ -26,7 +27,8 @@ const HomePage = () => {
                     Te invito a explorar mi portafolio; espero que lo disfrutes tanto como yo disfruto construirlo.
                 </p>
             </article>
-        </section>
+        </>
+        </Section>
             {pathname == "/dashboard/home" || pathname == "/dashboard/projects" || pathname == "/dashboard/skills" || pathname == "/dashboard/languages" || pathname == "/dashboard/contact" ? (
                             <Button onClick={() => {router.push("/")}} className="cursor-pointer font-sarpanch text-[24px] mb-4" text="Back" />
                         ) : ""}

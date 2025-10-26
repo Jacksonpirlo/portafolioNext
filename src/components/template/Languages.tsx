@@ -5,18 +5,19 @@ import { Card } from "../molecules/Card";
 
 import { usePathname, useRouter } from "next/navigation";
 import { Button } from "../atoms/Button";
+import Section from "../atoms/Section";
 
 const Languages = () => {
     const router = useRouter();
     const pathname = usePathname();
     return(
         <>
-        <section>
+        <Section>
             <article className="flex flex-col justify-center items-center lg:mt-30 m-7 lg:flex-row lg:gap-12">
                 <Card image={<Image src={languages.english} alt="English" width={500} className="w-60 sm:w-70 md:w-72 lg:w-80 xl:w-96 mx-auto" />} title="English" description="Level: B1" className="text-center" />
                 <Card image={<Image src={languages.chinese} alt="Chinese" width={500} className="w-60 sm:w-70 md:w-72 lg:w-80 xl:w-96 mx-auto" />} title="Mandarin Chinese" description="Level: HSK2" className="text-center" />
             </article>
-        </section>
+        </Section>
 
         {pathname == "/dashboard/home" || pathname == "/dashboard/projects" || pathname == "/dashboard/skills" || pathname == "/dashboard/languages" || pathname == "/dashboard/contact" ? (
         <Button onClick={() => {router.push("/")}} className="cursor-pointer font-sarpanch text-[24px] mb-7" text="Back" />
