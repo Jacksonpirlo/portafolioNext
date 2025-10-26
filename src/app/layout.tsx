@@ -1,6 +1,8 @@
 import Navbar from "@/components/organism/Nav";
 import "./globals.css";
 import Footer from "@/components/organism/Footer";
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 
 export default function RootLayout({
   children,
@@ -24,6 +26,7 @@ export default function RootLayout({
       <div className="lg:hidden"><Navbar/></div>
         {children}
         <Footer />
+        <ToastContainer />
       </body>
     </html>
   );

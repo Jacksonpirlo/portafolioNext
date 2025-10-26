@@ -2,7 +2,7 @@ import { CardProps } from "@/dto/card"
 import Image, { StaticImageData } from "next/image"
 import { JSX } from "react";
 
-export const Card = ({image, title, description, href, className}: CardProps) => {
+export const Card = ({image, title, description, className, onClick}: CardProps) => {
     const renderImage = () => {
         if (!image) return null;
         if (typeof image === "string" || (image as StaticImageData).src) {
@@ -14,12 +14,10 @@ export const Card = ({image, title, description, href, className}: CardProps) =>
         return null;
     };
     return(
-        <>
-        <article className={className}>
-            <a href={href} target="_blank">{renderImage()}</a>
+        <article className={className} onClick={onClick} style={{cursor: "pointer"}}>
+            {renderImage()}
             <h1 className="mt-4 mb-4 pirataOne font-bold text-3xl">{title}</h1>
             <p className="mb-3">{description}</p>
         </article>
-        </>
     )
 }

@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
 
-First, run the development server:
+# Next.js Portfolio
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Personal portfolio built with Next.js 15, TypeScript, and MongoDB. Includes sections for contact, projects, skills, and languages, with an admin panel and REST API for contact messages.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technologies
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Next.js 15 (App Router)
+- TypeScript
+- MongoDB (Mongoose)
+- React Toastify
+- CSS Modules
+- Tailwind
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Features
 
-## Learn More
+- Projects view with dynamic routes and individual detail
+- Contact form with API submission and notifications
+- Admin panel to manage content
+- SPA navigation with `next/navigation`
 
-To learn more about Next.js, take a look at the following resources:
+## Usage
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Install dependencies:
+	 ```bash
+	 npm install
+	 ```
+2. Configure your database in `.env`:
+	 ```env
+	 MONGO_URI=your_mongodb_uri
+	 ```
+3. Start the development server:
+	 ```bash
+	 npm run dev
+	 ```
+4. Go to [http://localhost:3000](http://localhost:3000)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Customization
 
-## Deploy on Vercel
+- Add your projects in `src/helpers/utils.ts`.
+- Modify styles in CSS Modules files.
+- Edit components in `src/components/` to change the UI.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Author
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Jackson Florez
+GitHub: [Jacksonpirlo](https://github.com/Jacksonpirlo)

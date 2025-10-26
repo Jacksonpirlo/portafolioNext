@@ -1,8 +1,11 @@
 import { StaticImageData } from "next/image";
 
-export interface Projects {
-    project1: StaticImageData;
-    project2: StaticImageData;
-    project3: StaticImageData;
-    project4: StaticImageData;
+export interface Project {
+    id: string;
+    name: string;
+    description: string;
+    image: StaticImageData;
+    url: string;
 }
+
+export type Projects = Project[];
