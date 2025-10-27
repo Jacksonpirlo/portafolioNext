@@ -26,7 +26,8 @@ const Contact = () => {
         await handleData(form);
         toast.success('Message send successfully');
         setForm({ fullName: "", email: "", message: "" });
-      } catch (error) {
+      } catch (err) {
+        console.error(err);
         toast.error('Error send message');
       }
     }

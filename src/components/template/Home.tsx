@@ -23,7 +23,7 @@ const HomePage = () => {
 
             <article className="flex justify-center items-center max-w-730 text-center pl-[10] pr-[10]">
                 <p className="max-w-7xl pl-2 pr-2">
-                    It's been over a year since I discovered my passion for web development. Since then, every day represents a new opportunity to learn, grow professionally, and advance my personal and financial development. I invite you to explore my portfolio; I hope you enjoy it as much as I enjoy building it.
+                    It&apos;s been over a year since I discovered my passion for web development. Since then, every day represents a new opportunity to learn, grow professionally, and advance my personal and financial development. I invite you to explore my portfolio; I hope you enjoy it as much as I enjoy building it.
                 </p>
             </article>
         </>

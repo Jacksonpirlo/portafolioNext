@@ -9,4 +9,8 @@ export interface Skills {
     npm: StaticImageData;
     python: StaticImageData;
     express: StaticImageData;
+    tailwind?: StaticImageData;
+    sql?: StaticImageData;
+    bootstrap?: StaticImageData;
+    git?: StaticImageData;
 }
