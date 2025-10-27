@@ -14,17 +14,16 @@ const HomePage = () => {
         <>
         <Section className="p-6 text-white">
         <>
-        <h1 className="font-bold text-4xl pirataOne">Portafolio</h1>
+        <h1 className="font-bold text-4xl pirataOne">Portfolio</h1>
             <article className="flex flex-col justify-center items-center m-3 mb-8">
                 <Image src={MyImage} alt="Photo" width={200} height={266} />
                 <h1 className="font-bold text-3xl mt-3 pirataOne">Sobre Mí</h1>
-                <p>Desarrollador Wed FullStak JR</p>
+                <p>Wed FullStak JR Developer</p>
             </article>
 
             <article className="flex justify-center items-center max-w-730 text-center pl-[10] pr-[10]">
                 <p className="max-w-7xl pl-2 pr-2">
-                    Ya ha pasado más de un año desde que descubrí mi pasión por el desarrollo web. Desde entonces, cada día representa una nueva oportunidad para aprender, crecer profesionalmente y avanzar en mi desarrollo personal y económico. 
-                    Te invito a explorar mi portafolio; espero que lo disfrutes tanto como yo disfruto construirlo.
+                    It's been over a year since I discovered my passion for web development. Since then, every day represents a new opportunity to learn, grow professionally, and advance my personal and financial development. I invite you to explore my portfolio; I hope you enjoy it as much as I enjoy building it.
                 </p>
             </article>
         </>
