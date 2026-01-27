@@ -3,7 +3,7 @@ import { StaticImageData } from "next/image";
 export interface Skills {
     html: StaticImageData;
     css: StaticImageData;
-    js: StaticImageData;
+    ts: StaticImageData;
     nodejs: StaticImageData;
     react?: StaticImageData;
     npm: StaticImageData;
@@ -13,4 +13,7 @@ export interface Skills {
     sql?: StaticImageData;
     bootstrap?: StaticImageData;
     git?: StaticImageData;
+    mongodb: StaticImageData;
+    nextjs: StaticImageData;
+    cypress: StaticImageData
 }

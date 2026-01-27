@@ -3,34 +3,12 @@ import Image from "next/image"
 import Section from "../atoms/Section"
 import CharacterImg from "@/assets/bigsmoke-removebg-preview.png"
 import CharacterImgbot from "@/assets/bot-removebg-preview.png"
-import styles from "@/app/Contact.module.css"
+import styles from "../../../app/Contact.module.css"
 import { Button } from "../atoms/Button"
-import { useRouter } from "next/navigation"
-import { usePathname } from "next/navigation"
-import { handleData } from "@/services/contactMessage"
-import { useState } from "react"
-import { toast } from 'react-toastify';
+import useContact from "@/hooks/useContact"
 
 const Contact = () => {
-  const router = useRouter();
-  const [form, setForm] = useState({ fullName: "", email: "", message: "" });
-  const pathname = usePathname()
-
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-      setForm({ ...form, [e.target.name]: e.target.value });
-    };
-
-    const sendData = async (e: React.FormEvent) => {
-      e.preventDefault();
-      try {
-        await handleData(form);
-        toast.success('Message send successfully');
-        setForm({ fullName: "", email: "", message: "" });
-      } catch (err) {
-        console.error(err);
-        toast.error('Error send message');
-      }
-    }
+  const {sendData, form, handleChange, pathname, handleBackClick} = useContact();
   return (
     <Section className="relative flex justify-center items-center min-h-screen bg-black overflow-hidden">
       <div className="relative flex flex-col justify-center items-center">
@@ -96,7 +74,7 @@ const Contact = () => {
           </button>
         </form>
         {pathname == "/dashboard/home" || pathname == "/dashboard/projects" || pathname == "/dashboard/skills" || pathname == "/dashboard/languages" || pathname == "/dashboard/contact" ? (
-          <Button onClick={() => {router.push("/")}} className="cursor-pointer font-sarpanch text-[24px] mb-4 mt-8" text="Back" />
+          <Button onClick={handleBackClick} className="cursor-pointer font-sarpanch text-[24px] mb-4 mt-8" text="Back" />
           ) : ""}
       </div>
     </Section>

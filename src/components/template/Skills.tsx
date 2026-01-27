@@ -1,14 +1,12 @@
 "use client"
-import { useRouter } from "next/navigation";
-import { usePathname } from "next/navigation";
 import { skills } from "@/helpers/utils";
 import Image from "next/image";
 import { Button } from "../atoms/Button";
 import Section from "../atoms/Section";
+import useHandleSound from "@/hooks/useHandleSound";
+
 const Skills = () => {
-    const router = useRouter();
-    const pathname = usePathname()
-    console.log(pathname)
+    const {pathname, handleBackClick} = useHandleSound();
     return(
         <>
         <Section className="flex flex-col justify-center items-center lg:mt-50">
@@ -17,15 +15,18 @@ const Skills = () => {
                 <h1 className="text-4xl font-bold pirataOne">Skills</h1>
             </div>
             <article>
-                <ul className="flex flex-wrap justify-center gap-4">
-                    <li><Image src={skills.html} alt="HTML" width={100} height={100}/></li>
-                    <li><Image src={skills.css} alt="CSS" /></li>
-                    <li><Image src={skills.js} alt="JavaScript" /></li>
+                <ul className="flex flex-wrap justify-center gap-8 w-[900px]">
+                    {/* <li><Image src={skills.html} alt="HTML" width={100} height={100}/></li>
+                    <li><Image src={skills.css} alt="CSS" /></li> */}
+                    <li><Image src={skills.ts} alt="Typescript" width={80} height={80} className="mt-2" /></li>
                     <li><Image src={skills.nodejs} alt="NODEJS" width={100} height={100} /></li>
                     <li><Image src={skills.express} alt="EXPRESS" width={100} height={100} /></li>
+                    <li><Image src={skills.cypress} alt="cypres" width={100} height={100} /></li>
                     <li><Image src={skills.npm} alt="NPM" width={100} height={100} /></li>
                     <li><Image src={skills.react!} alt="React" width={100} height={100} /></li>
+                    <li className="bg-white rounded-full flex items-center justify-center w-[100px] h-[100px] p-4 overflow-hidden"><Image src={skills.nextjs} alt="Next.js" width={65} height={65} className="object-contain" /></li>
                     <li><Image src={skills.sql!} alt="SQL" width={100} height={100} /></li>
+                    <li><Image src={skills.mongodb!} alt="MongoDB" width={100} height={100} /></li>
                     <li><Image src={skills.tailwind!} alt="Tailwind" width={100} height={100} /></li>
                     <li><Image src={skills.bootstrap!} alt="Bootstrap" width={100} height={100} /></li>
                     <li><Image src={skills.git!} alt="Git" width={100} height={100} /></li>
@@ -34,7 +35,7 @@ const Skills = () => {
             </>
         </Section>
             {pathname == "/dashboard/home" || pathname == "/dashboard/projects" || pathname == "/dashboard/skills" || pathname == "/dashboard/languages" || pathname == "/dashboard/contact" ? (
-                <Button onClick={() => {router.push("/")}} className="cursor-pointer font-sarpanch text-[24px] mb-4" text="Back" />
+                <Button onClick={handleBackClick} className="cursor-pointer font-sarpanch text-[24px] mb-4" text="Back" />
             ) : ""}
 
         </>

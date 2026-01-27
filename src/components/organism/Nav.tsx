@@ -1,19 +1,11 @@
 "use client";
-import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import ImageHover from "@/assets/def_def.png";
+import useNav from "@/hooks/useNav";
 
 const Navbar = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [showNavbar, setShowNavbar] = useState(true);
-  const menuItems = ["Home", "Projects", "Skills", "Languages", "Contact"];
-
-  const handleLinkClick = () => {
-    setMenuOpen(false);
-    setShowNavbar(false);
-  };
-
+  const {setMenuOpen, menuOpen, menuItems, handleLinkClick, handleHover, showNavbar} = useNav()
   return (
     <>
       <nav className="bg-[#0f0f0f] shadow-md w-full z-10 top-0 left-0 block lg:hidden">
@@ -67,7 +59,8 @@ const Navbar = () => {
                 key={item}
                 href={`/dashboard/${item.toLowerCase()}`}
                 className="block px-4 py-2 hover:bg-gray-800"
-                onClick={handleLinkClick} // Cierra menú al hacer click
+                onClick={handleLinkClick}
+                onMouseEnter={handleHover}
               >
                 {item}
               </Link>
@@ -79,9 +72,13 @@ const Navbar = () => {
       {showNavbar && (
         <nav className="hidden lg:block shadow-md relative">
           <h1 className="text-[40px] mt-7 ml-7 pirataOne">Portfolio</h1>
-          <div className="flex flex-col text-[25px] justify-center items-center mt-10 gap-6">
+          <div className="flex flex-col text-[25px] justify-center items-center mt-[170px] mr-[60px] gap-6">
             {menuItems.map((item) => (
-              <div key={item} className="flex items-center gap-2 group">
+              <div 
+                key={item} 
+                className="flex items-center gap-2 group"
+                onMouseEnter={handleHover}
+              >
                 <Image
                   src={ImageHover}
                   alt={`${item} hover`}

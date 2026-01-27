@@ -7,7 +7,7 @@ import { FaInstagram } from "react-icons/fa6";
 const Footer = () => {
     return(
         <>
-        <footer className="flex bg-[#000000] flex-col justify-center pirataOne mb-4">
+        <footer className="flex bg-[#000000] flex-col justify-center pirataOne mb-[-200px]">
             <div className="flex justify-between items-center mb-4">
                 <Link href={"https://www.instagram.com/jf_cube/"} className=""><FaInstagram className="text-2xl" /></Link>
                 <Link href={"https://wa.me/+573052984481"} className=""><FaWhatsapp className="text-2xl" /></Link>

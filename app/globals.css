@@ -20,7 +20,7 @@
 }
 
 body {
-  background-image: url("../assets/gta_san_andreas.png");
+  background-image: url("../src/assets/gta_san_andreas.png");
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;

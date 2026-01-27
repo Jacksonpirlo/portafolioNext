@@ -2,14 +2,12 @@
 import { languages } from "@/helpers/utils";
 import Image from "next/image";
 import { Card } from "../molecules/Card";
-
-import { usePathname, useRouter } from "next/navigation";
 import { Button } from "../atoms/Button";
 import Section from "../atoms/Section";
+import useHandleSound from "@/hooks/useHandleSound";
 
 const Languages = () => {
-    const router = useRouter();
-    const pathname = usePathname();
+    const {pathname, handleBackClick} = useHandleSound();
     return(
         <>
         <Section>
@@ -20,7 +18,7 @@ const Languages = () => {
         </Section>
 
         {pathname == "/dashboard/home" || pathname == "/dashboard/projects" || pathname == "/dashboard/skills" || pathname == "/dashboard/languages" || pathname == "/dashboard/contact" ? (
-        <Button onClick={() => {router.push("/")}} className="cursor-pointer font-sarpanch text-[24px] mb-7" text="Back" />
+        <Button onClick={handleBackClick} className="cursor-pointer font-sarpanch text-[24px] mb-7" text="Back" />
         ) : ""}
         </>
     )

@@ -1,14 +1,14 @@
 "use client"
 import { useRouter } from "next/navigation";
-import { usePathname } from "next/navigation";
 import { projects } from "@/helpers/utils";
 import { Card } from "../molecules/Card";
 import { Button } from "../atoms/Button";
 import Section from "../atoms/Section";
+import useHandleSound from "@/hooks/useHandleSound";
+
 const Projects = () => {
     const router = useRouter();
-    const pathname = usePathname();
-    console.log(pathname)
+    const {pathname, handleBackClick} = useHandleSound();
     return(
         <>
         <Section className="flex flex-col justify-center items-center lg:mt-30 m-7">
@@ -30,7 +30,7 @@ const Projects = () => {
         </Section>
 
         {pathname == "/dashboard/home" || pathname == "/dashboard/projects" || pathname == "/dashboard/skills" || pathname == "/dashboard/languages" || pathname == "/dashboard/contact" ? (
-            <Button onClick={() => {router.push("/")}} className="cursor-pointer font-sarpanch text-[24px] mb-4" text="Back" />
+            <Button onClick={handleBackClick} className="cursor-pointer font-sarpanch text-[24px] mb-4" text="Back" />
         ) : ""}
         </>
     )

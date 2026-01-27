@@ -1,16 +1,19 @@
 import html from "@/assets/html.png"
 import css from "@/assets/css.png"
-import js from "@/assets/js.png"
+import ts from "@/assets/TypeScript.svg"
 import nodejs from "@/assets/Node.js.svg"
 import react from "@/assets/reactts.png"
 import tailwind from "@/assets/tailwind.png"
 import bootstrap from "@/assets/bootstrap.png"
-import sql from "@/assets/servidor-sql.png"
+import sql from "@/assets/SQLite.svg"
+import mongodb from "@/assets/MongoDB.svg"
 import git from "@/assets/git.png"
 // import react from "@/assets/react.png"
 import npm from "@/assets/NPM.png"
 import python from "@/assets/Python.png"
 import express from "@/assets/express.png"
+import nextjs from "@/assets/Next.js.svg"
+import cypress from "@/assets/Cypress.svg"
 import { Skills } from "@/dto/skills"
 
 // *************************************
@@ -28,7 +31,7 @@ import english from "@/assets/en.png"
 import { Languages } from "@/dto/Languages"
 
 
-export const skills: Skills = { html, css, js, nodejs, npm, python, express, react, tailwind, sql, bootstrap, git };
+export const skills: Skills = { html, css, ts, nodejs, npm, python, express, react, tailwind, sql, bootstrap, git, mongodb, nextjs, cypress };
 export const projects: Projects = [
 	{
 		id: "greengables",
