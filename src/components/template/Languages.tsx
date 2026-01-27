@@ -12,8 +12,20 @@ const Languages = () => {
         <>
         <Section>
             <article className="flex flex-col justify-center items-center lg:mt-30 m-7 lg:flex-row lg:gap-12">
-                <Card image={<Image src={languages.english} alt="English" width={500} className="w-60 sm:w-70 md:w-72 lg:w-80 xl:w-96 mx-auto" />} title="English" description="Level: B1" className="text-center" />
-                <Card image={<Image src={languages.chinese} alt="Chinese" width={500} className="w-60 sm:w-70 md:w-72 lg:w-80 xl:w-96 mx-auto" />} title="Mandarin Chinese" description="Level: HSK2" className="text-center" />
+                <Card 
+                    image={<Image src={languages.english} alt="English" width={500} className="w-60 sm:w-70 md:w-72 lg:w-80 xl:w-96 mx-auto" />} 
+                    title="English" 
+                    description="Level: B1" 
+                    className="text-center"
+                    showViewProject={false}
+                />
+                <Card 
+                    image={<Image src={languages.chinese} alt="Chinese" width={500} className="w-60 sm:w-70 md:w-72 lg:w-80 xl:w-96 mx-auto" />} 
+                    title="Mandarin Chinese" 
+                    description="Level: HSK2" 
+                    className="text-center"
+                    showViewProject={false}
+                />
             </article>
         </Section>
 

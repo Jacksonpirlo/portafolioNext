@@ -5,25 +5,37 @@ import { Card } from "../molecules/Card";
 import { Button } from "../atoms/Button";
 import Section from "../atoms/Section";
 import useHandleSound from "@/hooks/useHandleSound";
+import { useSound } from "@/hooks/useSound";
 
 const Projects = () => {
     const router = useRouter();
     const {pathname, handleBackClick} = useHandleSound();
+    const playHoverSound = useSound("/sounds/hover.mp3", 0.2);
+    const playClickSound = useSound("/sounds/click.wav", 0.5);
+    
+    const handleProjectClick = (id: string) => {
+        playClickSound();
+        router.push(`/dashboard/projects/${id}`);
+    };
     return(
         <>
         <Section className="flex flex-col justify-center items-center lg:mt-30 m-7">
             <>
-                <h1 className="mb-16 font-bold text-5xl pirataOne">Projects</h1>
-                <article className="flex flex-wrap gap-4 justify-center items-center">
+                <h1 className="mb-16 font-bold text-5xl pirataOne text-[#f0d18a]">Projects</h1>
+                <article className="flex flex-wrap gap-6 justify-center items-center max-w-7xl">
                   {projects.map(project => (
-                    <Card
+                    <div 
                       key={project.id}
-                      image={project.image}
-                      title={project.name}
-                      description={project.description}
-                      className="flex flex-col rounded-2xl bg-white flex-wrap text-black text-center justify-center border border-gray-200 shadow-md hover:shadow-2xl hover:-translate-y-3 hover:scale-105 transition-all duration-300 ease-out cursor-pointer"
-                      onClick={() => router.push(`/dashboard/projects/${project.id}`)}
-                    />
+                      onMouseEnter={playHoverSound}
+                    >
+                      <Card
+                        image={project.image}
+                        title={project.name}
+                        description={project.description}
+                        className="flex flex-col rounded-lg bg-gradient-to-br from-[#1a1a1a] to-[#2d2d2d] flex-wrap text-white text-center justify-center border-2 border-[#f0d18a]/30 shadow-xl hover:shadow-[0_0_30px_rgba(240,209,138,0.5)] hover:border-[#f0d18a] hover:-translate-y-2 hover:scale-105 transition-all duration-300 ease-out cursor-pointer overflow-hidden group w-[280px]"
+                        onClick={() => handleProjectClick(project.id)}
+                      />
+                    </div>
                   ))}
                 </article>
             </>

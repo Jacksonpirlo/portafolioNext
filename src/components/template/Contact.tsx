@@ -74,7 +74,7 @@ const Contact = () => {
           </button>
         </form>
         {pathname == "/dashboard/home" || pathname == "/dashboard/projects" || pathname == "/dashboard/skills" || pathname == "/dashboard/languages" || pathname == "/dashboard/contact" ? (
-          <Button onClick={handleBackClick} className="cursor-pointer font-sarpanch text-[24px] mb-4 mt-8" text="Back" />
+          <Button onClick={handleBackClick} className="cursor-pointer font-sarpanch text-[24px] mb-4 mt-8 mr-[200px] sm:mr-0" text="Back" />
           ) : ""}
       </div>
     </Section>

@@ -12,7 +12,7 @@ const Skills = () => {
         <Section className="flex flex-col justify-center items-center lg:mt-50">
             <>
             <div className="m-6">
-                <h1 className="text-4xl font-bold pirataOne">Skills</h1>
+                <h1 className="text-4xl font-bold pirataOne text-[#f0d18a]">Skills</h1>
             </div>
             <article>
                 <ul className="flex flex-wrap justify-center gap-8 w-[900px]">

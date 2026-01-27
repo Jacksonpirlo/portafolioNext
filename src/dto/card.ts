@@ -8,4 +8,5 @@ export interface CardProps {
     description?: string;
     className?: string;
     onClick?: () => void;
+    showViewProject?: boolean;
 }
