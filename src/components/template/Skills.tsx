@@ -15,7 +15,7 @@ const Skills = () => {
                 <h1 className="text-4xl font-bold pirataOne text-[#f0d18a]">Skills</h1>
             </div>
             <article>
-                <ul className="flex flex-wrap justify-center gap-8 w-[900px]">
+                <ul className="flex flex-wrap justify-center gap-8 max-w-[900px]">
                     {/* <li><Image src={skills.html} alt="HTML" width={100} height={100}/></li>
                     <li><Image src={skills.css} alt="CSS" /></li> */}
                     <li><Image src={skills.ts} alt="Typescript" width={80} height={80} className="mt-2" /></li>
