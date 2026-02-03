@@ -14,8 +14,8 @@ const HomePage = () => {
         <h1 className="font-bold text-4xl pirataOne text-[#f0d18a]">Portfolio</h1>
             <article className="flex flex-col justify-center items-center m-3 mb-8">
                 <Image src={MyImage} alt="Photo" width={200} height={266} />
-                <h1 className="font-bold text-3xl mt-3 pirataOne text-[#f0d18a]">Sobre Mí</h1>
-                <p>Wed FullStak JR Developer</p>
+                <h1 className="font-bold text-3xl mt-3 pirataOne text-[#f0d18a]">About me</h1>
+                <p>Full Stack Developer</p>
             </article>
 
             <article className="flex justify-center items-center max-w-230 text-center pl-[10] pr-[10]">
