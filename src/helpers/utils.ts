@@ -19,7 +19,7 @@ import { Skills } from "@/dto/skills"
 // *************************************
 
 import project1 from "@/assets/greengables.jpeg";
-import project2 from "@/assets/caja_fuerte.jpeg";
+import project2 from "@/assets/ecommerce.png";
 import project3 from "@/assets/login.jpeg";
 import project4 from "@/assets/random-dogs.jpeg";
 import { Projects } from "@/dto/Projects"
@@ -51,22 +51,25 @@ export const projects: Projects = [
 		]
 	},
 	{
-		id: "safe",
-		name: "Safe",
-		description: "Safe made for practicing Vue JS",
-		image: project2,
-		url: "https://jacksonpirlo.github.io/Caja-fuerte/",
-		detailedDescription: "An interactive digital safe application built to practice and demonstrate Vue.js framework capabilities. This project showcases reactive components and state management in a fun and engaging way.",
-		purpose: "Developed as a hands-on learning project to master Vue.js fundamentals and reactive programming patterns.",
-		technologies: ["Vue.js", "JavaScript", "CSS3", "HTML5"],
-		features: [
-			"Interactive combination lock mechanism",
-			"Real-time state management with Vue.js",
-			"Smooth animations and transitions",
-			"Responsive user interface",
-			"Component-based architecture demonstration"
-		]
-	},
+    id: "ecommerce",
+    name: "Plantas Bonitas E-commerce",
+    description: "Full-stack e-commerce platform for selling beautiful plants",
+    image: project2,
+    url: "https://ecommerce-drab-six.vercel.app/",
+    detailedDescription: "A complete e-commerce solution developed to practice modern web development technologies. This project showcases authentication, database management, and real-time shopping cart functionality in a clean and user-friendly interface.",
+    purpose: "Built as a comprehensive learning project to master Next.js 14, MongoDB, NextAuth, and modern e-commerce patterns with internationalization support.",
+    technologies: ["Next.js 14", "TypeScript", "MongoDB", "NextAuth", "Tailwind CSS", "Zustand", "i18next", "Axios"],
+    features: [
+        "User authentication with NextAuth (credentials & Google OAuth)",
+        "Product catalog with search and filtering",
+        "Shopping cart with real-time updates",
+        "MongoDB integration for data persistence",
+        "Internationalization (English/Spanish)",
+        "Responsive design with Tailwind CSS",
+        "Protected routes and role-based access",
+        "Image optimization with Next.js Image component"
+    ]
+},
 	{
 		id: "register",
 		name: "Register",
