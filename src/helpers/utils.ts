@@ -88,22 +88,22 @@ export const projects: Projects = [
 			"Protected routes and user authorization"
 		]
 	},
-	{
-		id: "randomdogs",
-		name: "Random Dogs",
-		description: "Random Dog Website",
-		image: project4,
-		url: "https://jacksonpirlo.github.io/Random-Dogs/",
-		detailedDescription: "A delightful web application that fetches and displays random dog images using an external API. Perfect for dog lovers and as a demonstration of API integration and asynchronous JavaScript.",
-		purpose: "Created to practice API consumption and asynchronous programming while bringing smiles with adorable dog pictures.",
-		technologies: ["JavaScript", "HTML5", "CSS3", "REST API", "Fetch API"],
-		features: [
-			"Random dog image generation from API",
-			"Asynchronous data fetching",
-			"Clean and intuitive interface",
-			"Fast loading times",
-			"Mobile-friendly design"
-		]
-	}
+	// {
+	// 	id: "randomdogs",
+	// 	name: "Random Dogs",
+	// 	description: "Random Dog Website",
+	// 	image: project4,
+	// 	url: "https://jacksonpirlo.github.io/Random-Dogs/",
+	// 	detailedDescription: "A delightful web application that fetches and displays random dog images using an external API. Perfect for dog lovers and as a demonstration of API integration and asynchronous JavaScript.",
+	// 	purpose: "Created to practice API consumption and asynchronous programming while bringing smiles with adorable dog pictures.",
+	// 	technologies: ["JavaScript", "HTML5", "CSS3", "REST API", "Fetch API"],
+	// 	features: [
+	// 		"Random dog image generation from API",
+	// 		"Asynchronous data fetching",
+	// 		"Clean and intuitive interface",
+	// 		"Fast loading times",
+	// 		"Mobile-friendly design"
+	// 	]
+	// }
 ];
 export const languages: Languages = { chinese, english };
