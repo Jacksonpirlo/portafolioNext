@@ -15,5 +15,7 @@ export interface Skills {
     git?: StaticImageData;
     mongodb: StaticImageData;
     nextjs: StaticImageData;
-    cypress: StaticImageData
+    cypress: StaticImageData;
+    docker: StaticImageData;
+    kubernetes: StaticImageData;
 }

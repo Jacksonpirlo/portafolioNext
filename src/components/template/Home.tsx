@@ -20,7 +20,7 @@ const HomePage = () => {
 
             <article className="flex justify-center items-center max-w-230 text-center pl-[10] pr-[10]">
                 <p className="max-w-7xl pl-2 pr-2">
-                    It&apos;s been over a year since I discovered my passion for web development. Since then, every day represents a new opportunity to learn, grow professionally, and advance my personal and financial development. I invite you to explore my portfolio; I hope you enjoy it as much as I enjoy building it.
+                    With two years of hands-on experience in web development, I build reliable and purposeful digital products with a strong focus on quality, usability, and continuous improvement. This portfolio reflects my progression as a Full Stack Developer, my commitment to solving problems with technology, and the discipline I bring to every project. I invite you to explore my work and discover how I turn ideas into thoughtful, scalable experiences.
                 </p>
             </article>
         </>

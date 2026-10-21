@@ -11,6 +11,7 @@ export default function ProjectDetail() {
   const { id } = useParams();
   const project = projects.find((project) => project.id === id);
   const playClickSound = useSound("/sounds/click.wav", 0.5);
+  const isPresentation = project?.url.toLowerCase().endsWith(".pdf") ?? false;
 
   const handleBackClick = () => {
     playClickSound();
@@ -40,15 +41,21 @@ export default function ProjectDetail() {
           {project.name}
         </h1>
         
-        <div className="relative w-full h-[160px] md:h-[220px] mb-4 rounded-lg overflow-hidden border-2 border-[#f0d18a]/20">
-          <Image 
-            src={project.image} 
-            alt={project.name} 
-            fill
-            className="object-cover hover:scale-105 transition-transform duration-500"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a]/60 via-transparent to-transparent"></div>
-        </div>
+        {project.image ? (
+          <div className="relative w-full h-[160px] md:h-[220px] mb-4 rounded-lg overflow-hidden border-2 border-[#f0d18a]/20">
+            <Image
+              src={project.image}
+              alt={project.name}
+              fill
+              className="object-cover hover:scale-105 transition-transform duration-500"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a]/60 via-transparent to-transparent"></div>
+          </div>
+        ) : (
+          <div className="mb-4 rounded-lg border-2 border-[#f0d18a]/20 bg-[#0f0f0f] p-6 text-center">
+            <p className="text-sm text-gray-300">Project presentation available as a PDF.</p>
+          </div>
+        )}
 
         {project.detailedDescription && (
           <div className="mb-4">
@@ -85,14 +92,25 @@ export default function ProjectDetail() {
         )}
 
         <div className="flex flex-col sm:flex-row gap-2.5 justify-center items-center pt-4 border-t-2 border-[#f0d18a]/20">
-          <a 
-            href={project.url} 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="w-full sm:w-auto text-center bg-gradient-to-r from-[#f0d18a] to-[#ffe6a0] text-black px-5 py-2 rounded-lg font-sarpanch font-bold hover:scale-105 hover:shadow-[0_0_20px_rgba(240,209,138,0.6)] transition-all duration-300 uppercase tracking-wide text-xs"
-          >
-              View Project
-          </a>
+          <div className="flex w-full flex-col gap-2 sm:w-auto sm:flex-row">
+            <a
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full text-center bg-gradient-to-r from-[#f0d18a] to-[#ffe6a0] text-black px-5 py-2 rounded-lg font-sarpanch font-bold hover:scale-105 hover:shadow-[0_0_20px_rgba(240,209,138,0.6)] transition-all duration-300 uppercase tracking-wide text-xs sm:w-auto"
+            >
+                {isPresentation ? "Open Presentation" : "View Project"}
+            </a>
+            {isPresentation && (
+              <a
+                href={project.url}
+                download
+                className="w-full text-center border-2 border-[#f0d18a] text-[#f0d18a] px-5 py-2 rounded-lg font-sarpanch font-bold hover:bg-[#f0d18a] hover:text-black hover:scale-105 transition-all duration-300 uppercase tracking-wide text-xs sm:w-auto"
+              >
+                Download PDF
+              </a>
+            )}
+          </div>
           
           <Button
             text="← Back"

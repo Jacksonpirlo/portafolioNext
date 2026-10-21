@@ -4,7 +4,7 @@ export interface Project {
     id: string;
     name: string;
     description: string;
-    image: StaticImageData;
+    image?: StaticImageData | string;
     url: string;
     detailedDescription?: string;
     technologies?: string[];

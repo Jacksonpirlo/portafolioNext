@@ -32,7 +32,7 @@ const Projects = () => {
                         image={project.image}
                         title={project.name}
                         description={project.description}
-                        className="flex flex-col rounded-lg bg-gradient-to-br from-[#1a1a1a] to-[#2d2d2d] flex-wrap text-white text-center justify-center border-2 border-[#f0d18a]/30 shadow-xl hover:shadow-[0_0_30px_rgba(240,209,138,0.5)] hover:border-[#f0d18a] hover:-translate-y-2 hover:scale-105 transition-all duration-300 ease-out cursor-pointer overflow-hidden group w-[280px]"
+                        className="flex h-[390px] flex-col rounded-lg bg-gradient-to-br from-[#1a1a1a] to-[#2d2d2d] flex-wrap text-white text-center justify-center border-2 border-[#f0d18a]/30 shadow-xl hover:shadow-[0_0_30px_rgba(240,209,138,0.5)] hover:border-[#f0d18a] hover:-translate-y-2 hover:scale-105 transition-all duration-300 ease-out cursor-pointer overflow-hidden group w-[280px]"
                         onClick={() => handleProjectClick(project.id)}
                       />
                     </div>

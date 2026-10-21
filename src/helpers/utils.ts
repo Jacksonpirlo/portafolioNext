@@ -14,14 +14,14 @@ import python from "@/assets/Python.png"
 import express from "@/assets/express.png"
 import nextjs from "@/assets/Next.js.svg"
 import cypress from "@/assets/Cypress.svg"
+import docker from "@/assets/Docker.svg"
+import kubernetes from "@/assets/Kubernetes.svg"
 import { Skills } from "@/dto/skills"
 
 // *************************************
 
-import project1 from "@/assets/greengables.jpeg";
 import project2 from "@/assets/ecommerce.png";
-import project3 from "@/assets/login.jpeg";
-import project4 from "@/assets/random-dogs.jpeg";
+import hallaIcon from "@/assets/halla-icon-1024.png";
 import { Projects } from "@/dto/Projects"
 
 // *************************************
@@ -31,25 +31,8 @@ import english from "@/assets/en.png"
 import { Languages } from "@/dto/Languages"
 
 
-export const skills: Skills = { html, css, ts, nodejs, npm, python, express, react, tailwind, sql, bootstrap, git, mongodb, nextjs, cypress };
+export const skills: Skills = { html, css, ts, nodejs, npm, python, express, react, tailwind, sql, bootstrap, git, mongodb, nextjs, cypress, docker, kubernetes };
 export const projects: Projects = [
-	{
-		id: "greengables",
-		name: "Green Gables",
-		description: "Website for my school",
-		image: project1,
-		url: "https://jacksonpirlo.github.io/GreenGables/",
-		detailedDescription: "Green Gables is a comprehensive website developed for a school research group dedicated to educating students about the dangers of psychoactive substances. The platform serves as an educational hub, providing valuable information and resources to help young people make informed decisions.",
-		purpose: "Created for a school research group focused on awareness and prevention of psychoactive substance abuse among students.",
-		technologies: ["HTML", "CSS", "JavaScript", "Responsive Design"],
-		features: [
-			"Educational content about substance abuse prevention",
-			"Responsive design for mobile and desktop access",
-			"Clean and professional interface for students",
-			"Interactive sections for better engagement",
-			"Resource library with helpful information"
-		]
-	},
 	{
     id: "ecommerce",
     name: "Plantas Bonitas E-commerce",
@@ -71,39 +54,19 @@ export const projects: Projects = [
     ]
 },
 	{
-		id: "register",
-		name: "Register",
-		description: "Login made with PHP and SQL",
-		image: project3,
-		url: "https://github.com/Jacksonpirlo/Registro-php-sql",
-		detailedDescription: "A secure authentication system implementing both registration and login functionality. This project demonstrates backend development skills with PHP and database management using SQL, including proper security practices for user authentication.",
-		purpose: "Built to learn and implement secure authentication systems with proper password hashing and database integration.",
-		technologies: ["PHP", "MySQL", "SQL", "HTML", "CSS", "Session Management"],
+		id: "halla",
+		name: "Halla",
+		description: "Private project currently in development",
+		image: hallaIcon,
+		url: "/Halla-Preview.pdf",
+		detailedDescription: "Halla is my most ambitious project to date, currently under active development. This presentation offers a preview of its direction, product vision, and the experience I am building while keeping the implementation private for now.",
+		purpose: "A confidential product initiative focused on delivering a polished, scalable, and purposeful digital experience.",
+		technologies: ["Product Development", "Full-Stack Architecture", "User Experience", "Scalable Systems"],
 		features: [
-			"Secure user registration with password hashing",
-			"Login authentication system",
-			"Session management for user persistence",
-			"SQL database integration",
-			"Form validation and error handling",
-			"Protected routes and user authorization"
+			"Project vision and product direction",
+			"Early experience and interface previews",
+			"Implementation details intentionally kept private"
 		]
-	},
-	// {
-	// 	id: "randomdogs",
-	// 	name: "Random Dogs",
-	// 	description: "Random Dog Website",
-	// 	image: project4,
-	// 	url: "https://jacksonpirlo.github.io/Random-Dogs/",
-	// 	detailedDescription: "A delightful web application that fetches and displays random dog images using an external API. Perfect for dog lovers and as a demonstration of API integration and asynchronous JavaScript.",
-	// 	purpose: "Created to practice API consumption and asynchronous programming while bringing smiles with adorable dog pictures.",
-	// 	technologies: ["JavaScript", "HTML5", "CSS3", "REST API", "Fetch API"],
-	// 	features: [
-	// 		"Random dog image generation from API",
-	// 		"Asynchronous data fetching",
-	// 		"Clean and intuitive interface",
-	// 		"Fast loading times",
-	// 		"Mobile-friendly design"
-	// 	]
-	// }
+	}
 ];
 export const languages: Languages = { chinese, english };
